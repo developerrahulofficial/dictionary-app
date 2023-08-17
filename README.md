@@ -1,79 +1,49 @@
 # Dictionary Web App - Frontend Mentor Challenge
-
-
-This is a solution to the [Dictionary Web App](https://www.frontendmentor.io/challenges/dictionary-web-app-h5wwnyuKFL). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
-
-## Table of contents
-
-- [Overview](#overview)
-  - [The challenge](#the-challenge)
-  - [Screenshot](#screenshot)
-  - [Links](#links)
-- [My process](#my-process)
-  - [Built with](#built-with)
-  - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
-  - [Useful resources](#useful-resources)
-- [Author](#author)
-- [Acknowledgments](#acknowledgments)
-
-## Overview
-
-### The challenge
-
-This challenge requires calling an api to retrieve dictionary word definitions and displaying them. The api chosen for this is [dictionaryapi.dev](https://dictionaryapi.dev).
-
-This is a simple api call with a somewhat challenging response format. It is based on wikitext which is freeform, so there are often inconsistencies in the json that is returned, depending on word. For example, the audio file reference may be in second or third pronunciation slot in the returned array depending on what the article author did on wiktionary.
-
-Themes throws in a new wrinkle with font themes of Sans-serif, Serif, Monospaced, along with the more typical day/night color scheme switching. Automatic system switching is also implemented.
-
-An `<audio>` element is required in order to play mp3, ogg, etc. for the word pronunciation. The custom button requires that the audio element have controls hidden and be controlled through api only.
-
-The web page must be fully accessible and support full keyboard navigation. This requires a custom dropdown menu implementation with appropriate aria usage to replace the intrinsic system accessibility normally available in `<select>`.
-
-To add to the utility of the page, permalink hashes are added to the URL. This allows any search to be bookmarked and for back/forward browser navigation to act as a search history.
-
-An accessible busy spinner and live region is used in this implementation. During development, the dictionaryapi.dev site went down for several hours. This forced better error handling, timeout handling etc.
-
-### Screenshot
-
 ![Screenshot](./screenshot.webp)
 
+It appears that the project you're trying to run uses Vite as its build tool and development server. Here are the steps to run the `fem-dictionary-web-app` project on your localhost:
 
+1. **Clone the Repository:**
+   If you haven't already, clone the repository as mentioned earlier:
 
-## My process
+   ```sh
+   git clone https://github.com/jefcooper/fem-dictionary-web-app.git
+   ```
 
-Started Jan 22, 2023. Completed Feb 2, 2023.
+2. **Navigate to the Project Directory:**
+   Move into the project directory:
 
-### Built with
+   ```sh
+   cd fem-dictionary-web-app
+   ```
 
-- dictionaryapi.dev
-- Semantic HTML5 markup
-- Mobile-first workflow
-- Vercel hosting
+3. **Install Dependencies:**
+   Install the project's dependencies using npm:
 
-### To Do
+   ```sh
+   npm install
+   ```
 
-- ~~font dropdown keyboard navigation~~
-- ~~search typography~~
-- ~~focus color~~
-- ~~vertical spacing (use 'illegal' as an example)~~
-- ~~spacing between definition and example~~
-- ~~adjust tablet desktop spacing as necessary~~
-- ~~synonyms horizontal list and accent color~~
-- ~~example text color 50% opacity, example on keyboard~~
-- ~~padding at bottom of page~~
-- ~~make synonym/antonym words clickable links~~
-- ~~part of speech horizontal rule~~
-- ~~when #keyword is in url, use it for search term. i.e. permalinks.~~
-- ~~pseudo navigation via # in route. update with current keyword to allow bookmarking~~
-- ~~busy spinner or indication~~
-- ~~style error section~~
-- ~~styling of select dropdown for font style change~~
-- ~~render error text~~
-- ~~handle 404 error state~~
-- ~~hide play button when no selection~~
-- ~~hover on moon~~
-- ~~audio play button~~
+4. **Run the Development Server:**
+   To start the development server, use the following command:
 
+   ```sh
+   npm start
+   ```
 
+   This command will run Vite's development server, and the application will be accessible at a local URL, usually `http://localhost:8080` or a similar port.
+
+   Alternatively, you can use the specific `preview` script:
+
+   ```sh
+   npm run 
+   ```
+
+   This will also start the development server.
+
+5. **Access the Application:**
+   Open your web browser and navigate to the local URL where the development server is running (e.g., `http://localhost:8080`). You should be able to see and interact with the web application.
+
+Keep in mind that the available scripts and their functionality are defined in the project's `package.json` file. The above instructions assume that you have Node.js and npm installed on your system.
+
+If you encounter any issues during this process, please refer to the project's documentation or README for troubleshooting steps specific to the `fem-dictionary-web-app`.
