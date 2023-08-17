@@ -1,0 +1,11 @@
+@use "typography";
+
+.body {
+  color: var(--theme-clr);
+  background-color: var(--theme-bg);
+  @include typography.font-base;
+}
+
+a:focus-visible {
+  outline-color: var(--theme-select-focus);
+}

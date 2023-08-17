@@ -1,0 +1,98 @@
+/*****************************************************************************
+ * reset
+ *
+ *  Based on Josh Comeau's CSS reset.  This initializes elements to a
+ *  predictable and repeatable state to make reuse across project simpler.
+ *
+ *****************************************************************************/
+
+/**
+ * use border-box for all elements
+ */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/**
+ * set default margin on everything to 0
+ */
+* {
+  margin: 0;
+}
+
+/**
+ * full height body by default
+ */
+html,
+body {
+  height: 100%;
+}
+
+/**
+ * readable font defaults including proper high-dpi font anti-aliasing
+ */
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/**
+ * eliminate single line artifact on img and limit scale so initial display
+ * is not unusually huge for high-dpi images.
+ */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+
+  max-width: 100%;
+}
+
+/**
+ * inherit rather than use implicit fonts on form elements
+ */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/**
+ * headings and paragraph should inherit body font and have
+ * no implicit margins.
+ */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+
+  font: inherit;
+
+  overflow-wrap: break-word;
+}
+
+/**
+ * limit z-index to within the application layers and do not bleed into
+ * browser supplied layers.
+ */
+#root,
+#__next {
+  isolation: isolate;
+}
+
+/**
+ * eliminate styling on links so they look like normal text by default
+ */
+a {
+  color: currentcolor;
+  text-decoration: none;
+}

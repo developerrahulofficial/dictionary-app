@@ -1,0 +1,25 @@
+.search {
+  position: relative;
+  display: grid;
+  margin-top: 3.25rem;
+}
+
+.search__input {
+  padding-block: 1.25rem;
+  padding-inline: 1.5rem;
+  border-radius: 1rem;
+  border: 0;
+  background-color: var(--theme-search-bg);
+}
+.search__input:focus-visible {
+  outline-color: var(--theme-select-focus);
+}
+
+.search__label {
+  position: absolute;
+  display: grid;
+  place-items: center;
+  top: 0;
+  bottom: 0;
+  right: 0.5rem;
+}

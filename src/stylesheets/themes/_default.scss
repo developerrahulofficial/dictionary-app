@@ -1,0 +1,18 @@
+@use "light";
+@use "dark";
+
+:root {
+  // indicate preference to the browser
+  color-scheme: dark light;
+}
+
+@media (prefers-color-scheme: "light") {
+  .theme--default {
+    @include light.theme--light;
+  }
+}
+@media (prefers-color-scheme: "dark") {
+  .theme--default {
+    @include dark.theme--dark;
+  }
+}

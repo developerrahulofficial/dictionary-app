@@ -1,0 +1,9 @@
+@use "../base/typography";
+
+@mixin sans-serif {
+  --theme-font-family: #{typography.$ff-sans-serif};
+}
+
+.theme--sans-serif {
+  @include sans-serif;
+}

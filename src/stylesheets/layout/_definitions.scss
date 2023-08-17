@@ -1,0 +1,135 @@
+@use "../abstracts/mixins";
+
+.definitions {
+}
+.definition__part-of-speech {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: auto 1fr;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.definition__part-of-speech::after {
+  content: "";
+  align-self: center;
+  background-color: var(--theme-horizontal-rule);
+  height: 1px;
+}
+
+.definition__meaning-label {
+  margin-top: 2rem;
+}
+.definition__meaning-list {
+  padding-left: 1rem;
+  margin-top: 1rem;
+}
+.definition__meaning-list > li {
+  position: relative;
+  list-style: none;
+}
+
+.definition__meaning-list > li::before {
+  position: absolute;
+  display: inline-block;
+  content: "\2022";
+  color: var(--theme-clr-accent);
+  font-weight: 700;
+  width: 1em;
+  margin-top: 0.3em;
+  margin-left: -1em;
+}
+.definition__meaning-list li + li {
+  margin-top: 0.8125rem;
+}
+
+.definition__synonym-label {
+  display: inline-block;
+  padding-top: 2rem;
+  margin-right: 1rem;
+  color: var(--theme-synonym-label);
+}
+.definition__synonym-list {
+  display: inline;
+  padding-left: 0;
+  padding-top: 1rem;
+  list-style: none;
+  line-height: 1.4;
+}
+.definition__synonym {
+  display: inline;
+  color: var(--theme-clr-accent);
+}
+.definition__synonym a {
+  display: inline-block;
+}
+.definition__synonym + .definition__synonym {
+  padding-left: 0.2rem;
+}
+.definition__synonym::after {
+  content: ",";
+}
+.definition__synonym:last-child::after {
+  content: "";
+}
+.definition__antonym-label {
+  display: inline-block;
+  padding-top: 2rem;
+  margin-right: 1rem;
+  color: var(--theme-synonym-label);
+}
+.definition__antonym-list {
+  display: inline;
+  padding-left: 0;
+  padding-top: 1rem;
+  list-style: none;
+  line-height: 1.4;
+  word-break: keep-all;
+}
+.definition__antonym {
+  display: inline;
+  color: var(--theme-clr-accent);
+}
+.definition__antonym a {
+  display: inline-block;
+}
+.definition__antonym::after {
+  content: ",";
+}
+.definition__antonym:last-child::after {
+  content: "";
+}
+.definition__antonym-label {
+  margin-top: 2rem;
+}
+.definition__source-label {
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--theme-horizontal-rule);
+}
+.definition__source-list {
+  margin-top: 0.5rem;
+  list-style: none;
+  padding-left: 0;
+}
+.definition__source-url a {
+  overflow-wrap: break-word;
+  line-height: 1.4;
+}
+.definition__source-url a span {
+  padding-right: 0.5rem;
+}
+
+.definition__example {
+  color: var(--theme-definition-example);
+  margin-top: 0.5rem;
+}
+
+@include mixins.media-breakpoint("tablet") {
+  .definition__part-of-speech {
+    margin-top: 2.5rem;
+  }
+  .definition__meaning-label {
+    margin-top: 2.5rem;
+  }
+}

@@ -1,0 +1,39 @@
+@use "sass:color";
+@use "colors";
+@use "light";
+
+@mixin theme--dark {
+  @include light.theme--light;
+  --theme-bg: #{colors.$clr-neutral-800};
+  --theme-clr: #{colors.$clr-neutral-100};
+
+  // toggle
+  --theme-toggle-bg: linear-gradient(
+    135deg,
+    #{colors.$clr-accent-300},
+    #{colors.$clr-accent-300}
+  );
+  --theme-toggle-bg-hover: linear-gradient(
+    135deg,
+    #{colors.$clr-accent-300},
+    #{colors.$clr-accent-300}
+  );
+  --theme-toggle-clr: #{colors.$clr-neutral-50};
+  --theme-toggle-focus: #{colors.$clr-accent-300};
+  --theme-toggle-label: #{colors.$clr-neutral-400};
+
+  --theme-search-bg: #{colors.$clr-neutral-700};
+  --theme-select-popup: #{colors.$clr-neutral-700};
+  --theme-select-shadow: 0px 5px 30px #{colors.$clr-accent-400};
+  --theme-select-border: #{colors.$clr-neutral-500};
+
+  --theme-horizontal-rule: #{colors.$clr-neutral-500};
+
+  --theme-spinner-clr: #{colors.$clr-accent-400};
+  --theme-spinner-bg: #{colors.$clr-accent-400};
+}
+
+.theme--dark {
+  @include theme--dark;
+  color-scheme: only dark;
+}

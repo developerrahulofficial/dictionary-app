@@ -1,0 +1,63 @@
+/*****************************************************************************
+ * mixins
+ *
+ *  Reusable mixins.
+ *
+ *****************************************************************************/
+@use "sass:map";
+@use "variables";
+
+/**
+ * media-breakpoint
+ *
+ *  Usage:
+ *
+ *    @media-breakpoint('tablet') {
+ *      body {
+ *        background-color: green;
+ *      }
+ *    }
+ *
+ *  Use in place of @media.
+ *
+ *  The media-breakpoint relies on the definition of a $breakpoints map that
+ *  defines named breakpoints and their associated device width.
+ *
+ *  The $breakpoints map is defined for this project in _variables.scss
+ */
+@mixin media-breakpoint(
+  $mq-breakpoint,
+  $mq-breakpoints: variables.$breakpoints
+) {
+  @if map-has-key($mq-breakpoints, $mq-breakpoint) {
+    $mq-breakpoint: map-get($mq-breakpoints, $mq-breakpoint);
+  }
+
+  @media screen and (min-width: #{$mq-breakpoint}) {
+    @content;
+  }
+}
+
+/**
+ * media-breakpoint-max
+ *
+ *  This variant sets an upper bound on the breakpoint and should be read,
+ *  if width is less than breakpoint.  i.e. less than 'tablet' === 'mobile'.
+ */
+@mixin media-breakpoint-max(
+  $mq-breakpoint,
+  $mq-breakpoints: variables.$breakpoints
+) {
+  @if map-has-key($mq-breakpoints, $mq-breakpoint) {
+    $mq-breakpoint: map-get($mq-breakpoints, $mq-breakpoint);
+  }
+
+  @media screen and (max-width: calc(#{$mq-breakpoint} - 1px)) {
+    @content;
+  }
+}
+
+@mixin container {
+  max-width: 737px;
+  margin-inline: auto;
+}

@@ -1,0 +1,226 @@
+/*******************************************************************************
+ * Typography
+ *
+ * 14 Reg (all) - Reg used for source across mobile, tablet, desktop
+ * 14 Bold - used for font dropdown on mobile
+ * 15 Reg (all)
+ * 15 Bold Inter
+ * 16 Reg / Bold (all)
+ * 18 Reg / Bold (all)
+ * 20 Reg / Bold (all)
+ * 24 Reg / Bold (all)
+ * 32 Bold (all)
+ * 64 Bold (all)
+ * 64 Reg Roboto
+ *
+ * Desktop / Tablet
+ * 14 (source)
+ * 18 (body)
+ * 20
+ * 24
+ * 64
+ * 
+ * Mobile
+ * 14
+ * 15 (body)
+ * 16
+ * 18
+ * 32
+ * 
+ *
+ *  heading--1: keyword 32 Bold (mobile), 64 Bold (tablet/desktop) - keyword title
+ *  text--2: pronunciation 18 Reg (mobile), 24 Reg (tablet/desktop) Inter regardless of theme
+ *
+ *  heading--2: part-of-speech (mobile)
+ *    sans-serif: Inter, 700, 18px, italic
+ *    serif:      Lora, 700, 18px, italic
+ *    mono:       Inconsolata, 700, 18px, normal
+ *
+ *  heading--2: part-of-speech (tablet/desktop)
+ *    sans-serif: Inter, 700, 24px, italic
+ *    serif:      Inter, 400, 24px, normal
+ *    mono:       Inconsolata, 700, 24px, normal
+ *
+ *  heading--3: Meaning / Synonyms, 
+ *    (mobile) 400, 16px, normal (Inter, Lora, Inconsolata)
+ *    (tablet, desktop) 400, 20px, normal (Inter, Lora, Inconsolata)
+ *
+ *  heading--4: No Definitions Found
+ *    (all) 700, 20px, normal (...)
+ *
+ *  text--1: Body,
+ *    (mobile) 400, 15px/24px, normal (Inter, Lora, Inconsolata)
+ *    (tablet, desktop) 400, 18px/24px, normal (Inter, Lora, Inconsolata)
+ *
+ *  text--3: Synonym Body,
+ *    (mobile) 700, 16px, normal (Inter, Lora, Inconsolata)
+ *    (tablet/desktop) 700, 20px, normal
+ *
+ * components
+ * 
+ *  dropdown__text--1: dropdown, 14 Bold (mobile), 18 Bold (tablet/desktop)
+ *  search__text--1: search, 16 Bold (mobile), 20 Bold (tablet/desktop)
+ *
+ *******************************************************************************/
+
+@use "../abstracts/mixins";
+
+$ff-sans-serif: "Inter, sans-serif";
+$ff-serif: "Lora, serif";
+$ff-mono: "Inconsolata, mono";
+
+@mixin font-base {
+  font-family: var(--theme-font-family);
+  font-weight: 400;
+  font-size: 1rem;
+  font-style: normal;
+  text-decoration: none;
+  line-height: 1;
+}
+
+/*
+ *  heading--1: keyword - title
+ *  
+ *    2rem Bold (mobile), 
+ *    4rem Bold (tablet/desktop)
+ */
+.heading--1 {
+  @include font-base;
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 1.3;
+}
+
+/*  heading--2: part-of-speech (mobile)
+ *    sans-serif: Inter, 700, 18px, italic
+ *    serif:      Lora, 700, 18px, italic
+ *    mono:       Inconsolata, 700, 18px, normal
+ *
+ *  heading--2: part-of-speech (tablet/desktop)
+ *    sans-serif: Inter, 700, 24px, italic
+ *    serif:      Inter, 400, 24px, normal
+ *    mono:       Inconsolata, 700, 24px, normal
+ */
+.heading--2 {
+  @include font-base;
+  font-weight: 700;
+  font-size: 1.125rem;
+  font-style: italic;
+}
+
+/*  heading--3: Meaning / Synonyms, 
+ *    (mobile) 400, 16px, normal (Inter, Lora, Inconsolata)
+ *    (tablet, desktop) 400, 20px, normal (Inter, Lora, Inconsolata)
+ */
+.heading--3 {
+  @include font-base;
+}
+
+/* heading--4: No Definitions Found
+ * 700, 20px, normal (all)
+ */
+.heading--4 {
+  @include font-base;
+  font-size: 1.25rem;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+/*  text--1: Body,
+ *    (mobile) 400, 15px/24px, normal (Inter, Lora, Inconsolata)
+ *    (tablet, desktop) 400, 18px/24px, normal (Inter, Lora, Inconsolata)
+ */
+.text--1 {
+  @include font-base;
+  font-size: 0.9375rem;
+  line-height: 1.6;
+}
+
+/*  text--2: pronunciation 
+ *  18 Reg (mobile), 
+ *  24 Reg (tablet/desktop) Inter regardless of theme
+ */
+.text--2 {
+  @include font-base;
+  font-size: 1.125rem;
+  font-family: "Inter", sans-serif;
+}
+
+/*  text--3: Synonym Body,
+ *    (mobile) 700, 16px, normal (Inter, Lora, Inconsolata)
+ *    (tablet/desktop) 700, 20px, normal
+ */
+.text--3 {
+  @include font-base;
+  font-weight: 700;
+}
+
+.text--serif {
+  font-family: "Lora", serif;
+}
+
+.text--sans-serif {
+  font-family: "Inter", sans-serif;
+}
+
+.text--mono {
+  font-family: "Inconsolata", monospace;
+}
+
+/*  dropdown__text--1: dropdown, 14 Bold (mobile), 18 Bold (tablet/desktop)
+ */
+.dropdown__text--1 {
+}
+// different variants for illustration on dropdown
+.dropdown__text-serif {
+}
+.dropdown__text-sans-serif {
+}
+.dropdown__text-mono {
+}
+
+/*  search__text--1: search, 16 Bold (mobile), 20 Bold (tablet/desktop)
+ */
+.search__text--1 {
+  @include font-base;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.text--center {
+  text-align: center;
+}
+
+/*----------------------------------------------------------------------------
+  Tablet breakpoint
+ ----------------------------------------------------------------------------*/
+@include mixins.media-breakpoint("tablet") {
+  .heading--1 {
+    font-size: 4rem;
+  }
+
+  .heading--2 {
+    font-size: 1.5rem;
+  }
+
+  .heading--3 {
+    font-size: 1.25rem;
+  }
+
+  .text--1 {
+    font-size: 1.125rem;
+    line-height: 1.3333;
+  }
+
+  .text--2 {
+    font-size: 1.5rem;
+  }
+
+  .text--3 {
+    font-size: 1.25rem;
+  }
+
+  .search__text--1 {
+    font-size: 1.25rem;
+  }
+}

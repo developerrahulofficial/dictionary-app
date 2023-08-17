@@ -1,0 +1,16 @@
+@use "../abstracts/mixins";
+
+.header {
+  @include mixins.container;
+  padding-inline: 1.5rem;
+}
+.settings {
+  align-items: center;
+  margin-top: 3.5rem;
+}
+.icon-moon {
+  stroke: var(--theme-toggle-label);
+}
+.icon-moon:hover {
+  stroke: var(--theme-clr-accent);
+}

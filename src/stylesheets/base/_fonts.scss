@@ -1,0 +1,66 @@
+/**
+ * Inter
+ */
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  src: local(Inter), url("/assets/fonts/Inter-Regular.ttf") format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  src: local(Inter), url("/assets/fonts/Inter-Bold.ttf") format("truetype");
+  font-display: swap;
+}
+
+/**
+ * Inconsolata
+ */
+@font-face {
+  font-family: "Inconsolata";
+  font-style: normal;
+  font-weight: 400;
+  src: local(Inter),
+    url("/assets/fonts/Inconsolata-Regular.ttf") format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inconsolata";
+  font-style: normal;
+  font-weight: 700;
+  src: local(Inter),
+    url("/assets/fonts/Inconsolata-Bold.ttf") format("truetype");
+  font-display: swap;
+}
+
+/**
+ * Lora
+ */
+@font-face {
+  font-family: "Lora";
+  font-style: normal;
+  font-weight: 400;
+  src: local(Inter), url("/assets/fonts/Lora-Regular.ttf") format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Lora";
+  font-style: normal;
+  font-weight: 700;
+  src: local(Inter), url("/assets/fonts/Lora-Bold.ttf") format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Lora";
+  font-style: italic;
+  font-weight: 700;
+  src: local(Inter), url("/assets/fonts/Lora-BoldItalic.ttf") format("truetype");
+  font-display: swap;
+}

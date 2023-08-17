@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Frontend Mentor Dictionary Web App Challenge">
+  <meta name="color-scheme" content="dark">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  <link rel="stylesheet" href="stylesheets/main.scss">
+  <script src="scripts/script.js" type="module"></script>
+
+  <title>Dictionary web app</title>
+</head>
+
+<body class="body theme--default theme--mono">
+  <header class="header">
+    <div class="settings">
+      <span class="logo">
+        <a href="#">
+          <span class="visually-hidden">Dictionary Home</span>
+          <svg class="icon icon-logo" aria-hidden="true">
+            <use href="./assets/icons.svg#logo"></use>
+          </svg>
+        </a>
+      </span>
+      <label class="visually-hidden" for="font-theme-select" id="font-theme-select__label">Select Font Style</label>
+      <div class="select" data-select>
+        <select id="font-theme-select" data-font-theme>
+          <option value="Sans Serif">Sans Serif</option>
+          <option value="Serif">Serif</option>
+          <option value="Mono">Mono</option>
+        </select>
+        <span class="select__focus"></span>
+      </div>
+      <input type="checkbox" class="toggle__checkbox dark-mode__toggle" id="dark-mode__toggle" data-dark-mode-toggle>
+      <div class="toggle">
+        <label class="toggle__slider" for="dark-mode__toggle"></label>
+        <label class="toggle__label" for="dark-mode__toggle">
+          <span class="visually-hidden">Enable Dark Mode</span>
+          <svg class="icon icon-moon" aria-hidden="true">
+            <use href="./assets/icons.svg#icon-moon"></use>
+          </svg>
+        </label>
+      </div>
+      <!-- font, theme settings -->
+    </div>
+    <div class="search">
+      <!-- search -->
+      <input autofocus placeholder="Search for any word..." type="text" class="search__input search__text--1"
+        id="search-term">
+      <label class="search__label">
+        <span class="visually-hidden">Enter word to lookup</span>
+        <button type="button" class="btn btn--icon" id="search-button">
+          <span class="visually-hidden">Search</span>
+          <svg class="icon icon-search">
+            <use href="assets/icons.svg#icon-search"></use>
+          </svg>
+        </button>
+      </label>
+    </div>
+  </header>
+
+  <main class="main" data-state aria-live="polite" aria-busy="false">
+
+    <section data-keyword class="keyword">
+      <h1 data-keyword__term class="keyword__word heading--1"></h1>
+      <p data-keyword__pronunciation class="keyword__pronunciation text--2"></p>
+      <figure class="keyword__audio">
+        <figcaption class="visually-hidden">Listen to the pronunciation</figcaption>
+        <audio data-keyword__audio>
+        </audio>
+        <button type="button" class="btn btn--icon keyword__audio-play" data-keyword__play>
+          <span class="visually-hidden">Play keyword pronunciation</span>
+          <svg class="icon icon-play">
+            <use href="assets/icons.svg#icon-play"></use>
+          </svg>
+        </button>
+      </figure>
+    </section>
+
+    <section class="error text--center">
+      <p class="heading--1 error__emoji">😕</p>
+      <h1 class="heading--4 error__title" data-error-title></h1>
+      <p class="text--1 error__message" data-error-message></p>
+    </section>
+
+    <section data-definitions class="definitions"></section>
+
+    <section class="busy">
+      <div class="spinner">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </section>
+    <!--
+    <div id="search-result"></div>
+    -->
+
+  </main>
+
+</body>
+
+</html>

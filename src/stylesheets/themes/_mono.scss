@@ -1,0 +1,9 @@
+@use "../base/typography";
+
+@mixin mono {
+  --theme-font-family: #{typography.$ff-mono};
+}
+
+.theme--mono {
+  @include mono;
+}
