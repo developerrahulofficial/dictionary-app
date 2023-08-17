@@ -1,10 +1,5 @@
 # Dictionary Web App - Frontend Mentor Challenge
 
-[![Deploy Site to GitHub Pages](https://github.com/jefcooper/fem-dictionary-web-app/actions/workflows/static.yml/badge.svg)](https://github.com/jefcooper/fem-dictionary-web-app/actions/workflows/static.yml)
-![Vercel](https://vercelbadge.vercel.app/api/jefcooper/fem-dictionary-web-app)
-
-- Live on Github Pages: https://jefcooper.github.io/fem-dictionary-web-app
-- Live on Vercel: https://fem-dictionary-web-app.vercel.app/#keyboard
 
 This is a solution to the [Dictionary Web App](https://www.frontendmentor.io/challenges/dictionary-web-app-h5wwnyuKFL). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
@@ -44,11 +39,7 @@ An accessible busy spinner and live region is used in this implementation. Durin
 
 ![Screenshot](./screenshot.webp)
 
-### Links
 
-- Solution URL: [Github Repository](https://github.com/jefcooper/fem-dictionary-web-app)
-- Live Site URL: [Github Pages](https://jefcooper.github.io/fem-dictionary-web-app)
-- Live on Vercel: [Vercel](https://fem-dictionary-web-app.vercel.app/#keyboard)
 
 ## My process
 
@@ -85,36 +76,4 @@ Started Jan 22, 2023. Completed Feb 2, 2023.
 - ~~hover on moon~~
 - ~~audio play button~~
 
-### Future
 
-- animated transitions
-
-### Bugs and Finishing Steps
-
-- ~~click on search icon with empty search input gives # garbage~~
-- ~~"bogus" shows bullets not aligned for synonyms on individual definitions. Phonetic pronunciation not~~
-  ~~showing, so api not returning root level pronunciation, need to go into list and get first if not found.~~
-- ~~pronunciation not found on root, showing 'undefined'. Find in list and/or show blank instead of undefined.~~
-
-### Useful resources
-
-- Wikimedia API https://www.mediawiki.org/wiki/API:Main_page
-- https://dictionaryapi.dev/
-- https://api.dictionaryapi.dev/api/v2/entries/en/cat
-- https://moderncss.dev/custom-select-styles-with-pure-css/
-
-#### Tooling
-
-- https://www.joshwcomeau.com/css/custom-css-reset/
-- https://svg-sprite-generator.vercel.app/
-- https://medium.com/swlh/better-ways-to-organise-css-properties-9a066e7ded62
-- https://vercel.com
-
-#### My Codepens
-
-## Author
-
-- Website - [Jeff Cooper](https://jefcooper.github.io)
-- Frontend Mentor - [@jefcooper](https://www.frontendmentor.io/profile/jefcooper)
-
-## Acknowledgments
