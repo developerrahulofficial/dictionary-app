@@ -14,7 +14,7 @@ It appears that the project you're trying to run uses Vite as its build tool and
    Move into the project directory:
 
    ```sh
-   cd fem-dictionary-web-app
+   cd dictionary-app
    ```
 
 3. **Install Dependencies:**
