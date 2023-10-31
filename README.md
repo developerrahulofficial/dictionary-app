@@ -3,6 +3,17 @@
 
 It appears that the project you're trying to run uses Vite as its build tool and development server. Here are the steps to run the `fem-dictionary-web-app` project on your localhost:
 
+METHOD 1. **USING DOCKER**
+   If Docker install in your machine run below command 
+
+   ```sh
+   docker run -p 8080:8080  aksamitsah/fem-dictionary-web-app
+   ```
+
+   ```sh
+   docker run -d -p 8080:8080  aksamitsah/fem-dictionary-web-app # RUN in Background
+   ```
+
 1. **Clone the Repository:**
    If you haven't already, clone the repository as mentioned earlier:
 
