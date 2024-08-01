@@ -1,12 +1,12 @@
 {
   "name": "fem-dictionary-web-app",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Front-end mentor dictionary web app",
   "main": "index.js",
   "scripts": {
-    "start": "vite",
+    "start": "vite --host 0.0.0.0",
     "build": "vite build",
-    "preview": "vite preview --port 8080"
+    "preview": "vite preview --host 0.0.0.0 --port 8080"
   },
   "repository": {
     "type": "git",
