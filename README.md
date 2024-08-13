@@ -1,7 +1,7 @@
 # Dictionary Web App - Frontend Mentor Challenge
 ![Screenshot](./screenshot.webp)
 
-It appears that the project you're trying to run uses Vite as its build tool and development server. Here are the steps to run the `fem-dictionary-web-app` project on your localhost:
+The project you're trying to run uses Vite as its build tool and development server. Here are the steps to run the `fem-dictionary-web-app` project on your localhost:
 
 1. **Clone the Repository:**
    If you haven't already, clone the repository as mentioned earlier:
@@ -44,6 +44,6 @@ It appears that the project you're trying to run uses Vite as its build tool and
 5. **Access the Application:**
    Open your web browser and navigate to the local URL where the development server is running (e.g., `http://localhost:8080`). You should be able to see and interact with the web application.
 
-Keep in mind that the available scripts and their functionality are defined in the project's `package.json` file. The above instructions assume that you have Node.js and npm installed on your system.
+Remember that the available scripts and their functionality are defined in the project's `package.json` file. The above instructions assume you have Node.js and npm installed on your system.
 
 If you encounter any issues during this process, please refer to the project's documentation or README for troubleshooting steps specific to the `fem-dictionary-web-app`.
